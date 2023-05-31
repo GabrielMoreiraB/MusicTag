@@ -3,6 +3,7 @@ import Banner from '../../components/Banner';
 import Titulo from '../../components/Titulo';
 import videos from '../../Json/db.json'
 import styles from './player.module.css';
+import NaoEncontrada from '../../components/NaoEncontrada';
 
 const Player = () => {
     const parametros = useParams();
@@ -10,6 +11,9 @@ const Player = () => {
     const video = videos.find(video => {
         return video.id === Number(parametros.id)
     })
+    if(!video){
+        return <NaoEncontrada/>
+    }
     return (
         <>
             <Banner imagem='player' />
