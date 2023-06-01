@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from './logo.png';
 import styles from './cabecalho.module.css'
 import CabecalhoLink from "../CabecalhoLink";
 
@@ -9,7 +8,7 @@ const Cabecalho = () => {
         <div>
         <header className={styles.cabecalho}>
             <Link to="./">
-                <img src={logo} alt="Logo da pagina" />
+                <h3 className={styles.titulo}>🎬Play</h3>
             </Link>
                 <nav>
                     <CabecalhoLink url='./'>Home</CabecalhoLink>
